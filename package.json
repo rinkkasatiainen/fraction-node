@@ -1,0 +1,21 @@
+{
+  "name": "Fractions",
+  "version": "1.0.0",
+  "description": "node module built for Worlds Best Introduction to TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/test-setup.js --require babel-polyfill  -- src/**/*.spec.js */*.spec.js",
+    "test:w": "npm run test -- --watch",
+    "lint": "eslint -- src/",
+    "lint:fix": "eslint --fix -- src/ "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "mocha": "^5.2.0"
+  }
+}
