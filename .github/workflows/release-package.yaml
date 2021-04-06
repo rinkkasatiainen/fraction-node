@@ -1,4 +1,4 @@
-name: Fractions
+name: Publish Fractions
 
 on:
   release:

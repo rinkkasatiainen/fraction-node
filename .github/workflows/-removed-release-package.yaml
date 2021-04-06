@@ -1,4 +1,4 @@
-name: Fractions
+name: Fractions - on push
 
 on:
   push:
