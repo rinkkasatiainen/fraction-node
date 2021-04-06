@@ -1,6 +1,6 @@
 {
-  "name": "@rinkkasatiainen/fractions",
-  "version": "0.2.1",
+  "name": "@rinkkasatiainen/fraction-node",
+  "version": "0.2.3",
   "description": "node module built for Worlds Best Introduction to TDD",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,9 @@
   },
   "author": "",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/expect": "^24.3.0",
