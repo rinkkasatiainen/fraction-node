@@ -136,7 +136,6 @@ describe('Fraction', () => {
 
             expect(first.times(second)).to.eql(BuildFraction.of(15).by(16))
         })
-
     })
 
     describe('division', () =>  {
