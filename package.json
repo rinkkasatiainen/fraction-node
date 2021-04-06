@@ -1,6 +1,6 @@
 {
-  "name": "rinkkasatiainen/fractions",
-  "version": "1.0.0",
+  "name": "fractions",
+  "version": "0.1.0",
   "description": "node module built for Worlds Best Introduction to TDD",
   "main": "index.js",
   "scripts": {
