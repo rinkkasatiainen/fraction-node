@@ -1,9 +1,8 @@
 name: Fractions
 
 on:
-  push:
-    branches:
-      - latest
+  release:
+    types: [created]
 
 jobs:
   build:
