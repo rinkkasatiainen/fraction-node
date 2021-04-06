@@ -1,6 +1,6 @@
 {
   "name": "@rinkkasatiainen/fraction-node",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "node module built for Worlds Best Introduction to TDD",
   "main": "index.js",
   "scripts": {
