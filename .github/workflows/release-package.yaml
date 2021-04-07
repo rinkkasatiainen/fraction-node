@@ -1,9 +1,9 @@
 name: Publish Fractions
 
 on:
-  release:
-    types:
-      - created
+  push:
+    branches:
+      - latest
 
 jobs:
   build:
@@ -28,8 +28,8 @@ jobs:
           scope: '@rinkkasatiainen'
       - run: yarn install
       - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
-#      - run: yarn version --minor
-#      - run: git push --tags && git push
+      - run: yarn version --minor
+      - run: git push --tags && git push
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
