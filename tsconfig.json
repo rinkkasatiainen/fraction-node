@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "outDir": "./public",
+    "outDir": "./lib",
     "target": "es5",
+    "declaration": true,
     "module": "commonjs",
     "removeComments": true,
     "sourceMap": true,
-    //    "jsx": "react",
-    //    "jsxFactory": "h",
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "strict": true,
@@ -26,11 +25,10 @@
     "baseUrl": "."
   },
   "include": [
-    "./**/src/**/*",
-    "./**/test/**/*"
+    "./src/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
-    //  , "**/*.spec.ts"
+    "node_modules",
+    "./**/test/**/*"
   ]
 }

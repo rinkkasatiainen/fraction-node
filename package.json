@@ -4,6 +4,7 @@
   "description": "node module built for Worlds Best Introduction to TDD",
   "main": "index.js",
   "scripts": {
+    "build": "yarn run tsc -p .",
     "test": "NODE_ENV=test ts-mocha test/**.spec.ts",
     "test:w": "npm run test -- --watch",
     "lint": "eslint -- src/",
