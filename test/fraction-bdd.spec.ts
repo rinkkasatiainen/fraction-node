@@ -1,8 +1,25 @@
 import {expect} from 'chai'
-import {Fraction, BuildFraction} from '../src/fraction'
+import {Fraction, BuildFraction, gcd} from '../src/fraction'
 // import { expect } from 'chai'
 
 describe('Fraction', () => {
+
+    describe('gcd', () => {
+
+        it('basic numbers', () => {
+            expect(gcd(0,0)).to.eql(0)
+            expect(gcd(1,1)).to.eql(1)
+            expect(gcd(2,2)).to.eql(2)
+        })
+
+        it('multiples of', () => {
+            expect(gcd(2,4)).to.eql(2)
+            expect(gcd(6,3)).to.eql(3)
+            expect(gcd(48,18)).to.eql(6)
+            expect(gcd(18,48)).to.eql(6)
+        })
+    });
+
     describe('is displayed in lowest term', () => {
         it('is in lowest form when divisible by numerator', () => {
             const fract = BuildFraction.of(2).by(4)

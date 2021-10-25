@@ -14,6 +14,18 @@ export const BuildFraction = {
     }),
 }
 
+
+export const gcd: (a: number, b: number) => number =
+    (a, b) => {
+        while( b !== 0){
+            let t: number = b
+            b = a % b
+            a = t
+        }
+        return a
+    }
+
+
 class FractionImpl implements Fraction {
     public readonly numerator: number
     public readonly denominator: number
@@ -25,14 +37,9 @@ class FractionImpl implements Fraction {
     }
 
     public static build(numerator: number, denominator: number): FractionImpl {
-        let commoonNorm = 2
-        while (commoonNorm <=  Math.min( Math.abs( numerator ), Math.abs( denominator ))) {
-            if (denominator % commoonNorm === 0 && numerator % commoonNorm === 0) {
-                return FractionImpl.build(numerator / commoonNorm, denominator / commoonNorm)
-            }
-            commoonNorm += 1
-        }
-        return new FractionImpl(numerator, denominator)
+        const _gcd = gcd(numerator, denominator)
+
+        return new FractionImpl( numerator / _gcd, denominator / _gcd)
     }
 
     public plus(addend: Fraction): Fraction {
